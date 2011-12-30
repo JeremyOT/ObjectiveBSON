@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24F5416814AD4513009B8EF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F5416714AD4513009B8EF7 /* Foundation.framework */; };
+		24F5416E14AD4513009B8EF7 /* BSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F5416D14AD4513009B8EF7 /* BSON.m */; };
+		24F5417614AD4513009B8EF7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F5417514AD4513009B8EF7 /* SenTestingKit.framework */; };
+		24F5417814AD4513009B8EF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F5417714AD4513009B8EF7 /* UIKit.framework */; };
+		24F5417914AD4513009B8EF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F5416714AD4513009B8EF7 /* Foundation.framework */; };
+		24F5417C14AD4513009B8EF7 /* libBSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F5416414AD4513009B8EF7 /* libBSON.a */; };
+		24F5418214AD4513009B8EF7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24F5418014AD4513009B8EF7 /* InfoPlist.strings */; };
+		24F5418514AD4513009B8EF7 /* BSONTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F5418414AD4513009B8EF7 /* BSONTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24F5417A14AD4513009B8EF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24F5415B14AD4513009B8EF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24F5416314AD4513009B8EF7;
+			remoteInfo = BSON;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24F5416414AD4513009B8EF7 /* libBSON.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBSON.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		24F5416714AD4513009B8EF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		24F5416B14AD4513009B8EF7 /* BSON-Prefix.pch */ = {isa = PBXFileReference; path = "BSON-Prefix.pch"; sourceTree = "<group>"; };
+		24F5416C14AD4513009B8EF7 /* BSON.h */ = {isa = PBXFileReference; path = BSON.h; sourceTree = "<group>"; };
+		24F5416D14AD4513009B8EF7 /* BSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSON.m; sourceTree = "<group>"; };
+		24F5417414AD4513009B8EF7 /* BSONTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BSONTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24F5417514AD4513009B8EF7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		24F5417714AD4513009B8EF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		24F5417F14AD4513009B8EF7 /* BSONTests-Info.plist */ = {isa = PBXFileReference; path = "BSONTests-Info.plist"; sourceTree = "<group>"; };
+		24F5418114AD4513009B8EF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24F5418314AD4513009B8EF7 /* BSONTests.h */ = {isa = PBXFileReference; path = BSONTests.h; sourceTree = "<group>"; };
+		24F5418414AD4513009B8EF7 /* BSONTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSONTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24F5416114AD4513009B8EF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24F5416814AD4513009B8EF7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24F5417014AD4513009B8EF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24F5417614AD4513009B8EF7 /* SenTestingKit.framework in Frameworks */,
+				24F5417814AD4513009B8EF7 /* UIKit.framework in Frameworks */,
+				24F5417914AD4513009B8EF7 /* Foundation.framework in Frameworks */,
+				24F5417C14AD4513009B8EF7 /* libBSON.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24F5415914AD4513009B8EF7 = {
+			isa = PBXGroup;
+			children = (
+				24F5416914AD4513009B8EF7 /* BSON */,
+				24F5417D14AD4513009B8EF7 /* BSONTests */,
+				24F5416614AD4513009B8EF7 /* Frameworks */,
+				24F5416514AD4513009B8EF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24F5416514AD4513009B8EF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24F5416414AD4513009B8EF7 /* libBSON.a */,
+				24F5417414AD4513009B8EF7 /* BSONTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24F5416614AD4513009B8EF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24F5416714AD4513009B8EF7 /* Foundation.framework */,
+				24F5417514AD4513009B8EF7 /* SenTestingKit.framework */,
+				24F5417714AD4513009B8EF7 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24F5416914AD4513009B8EF7 /* BSON */ = {
+			isa = PBXGroup;
+			children = (
+				24F5416C14AD4513009B8EF7 /* BSON.h */,
+				24F5416D14AD4513009B8EF7 /* BSON.m */,
+				24F5416A14AD4513009B8EF7 /* Supporting Files */,
+			);
+			path = BSON;
+			sourceTree = "<group>";
+		};
+		24F5416A14AD4513009B8EF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24F5416B14AD4513009B8EF7 /* BSON-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24F5417D14AD4513009B8EF7 /* BSONTests */ = {
+			isa = PBXGroup;
+			children = (
+				24F5418314AD4513009B8EF7 /* BSONTests.h */,
+				24F5418414AD4513009B8EF7 /* BSONTests.m */,
+				24F5417E14AD4513009B8EF7 /* Supporting Files */,
+			);
+			path = BSONTests;
+			sourceTree = "<group>";
+		};
+		24F5417E14AD4513009B8EF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24F5417F14AD4513009B8EF7 /* BSONTests-Info.plist */,
+				24F5418014AD4513009B8EF7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		24F5416214AD4513009B8EF7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		24F5416314AD4513009B8EF7 /* BSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24F5418814AD4513009B8EF7 /* Build configuration list for PBXNativeTarget "BSON" */;
+			buildPhases = (
+				24F5416014AD4513009B8EF7 /* Sources */,
+				24F5416114AD4513009B8EF7 /* Frameworks */,
+				24F5416214AD4513009B8EF7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BSON;
+			productName = BSON;
+			productReference = 24F5416414AD4513009B8EF7 /* libBSON.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		24F5417314AD4513009B8EF7 /* BSONTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24F5418B14AD4513009B8EF7 /* Build configuration list for PBXNativeTarget "BSONTests" */;
+			buildPhases = (
+				24F5416F14AD4513009B8EF7 /* Sources */,
+				24F5417014AD4513009B8EF7 /* Frameworks */,
+				24F5417114AD4513009B8EF7 /* Resources */,
+				24F5417214AD4513009B8EF7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24F5417B14AD4513009B8EF7 /* PBXTargetDependency */,
+			);
+			name = BSONTests;
+			productName = BSONTests;
+			productReference = 24F5417414AD4513009B8EF7 /* BSONTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24F5415B14AD4513009B8EF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = JOT;
+			};
+			buildConfigurationList = 24F5415E14AD4513009B8EF7 /* Build configuration list for PBXProject "BSON" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 24F5415914AD4513009B8EF7;
+			productRefGroup = 24F5416514AD4513009B8EF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24F5416314AD4513009B8EF7 /* BSON */,
+				24F5417314AD4513009B8EF7 /* BSONTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24F5417114AD4513009B8EF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24F5418214AD4513009B8EF7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24F5417214AD4513009B8EF7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24F5416014AD4513009B8EF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24F5416E14AD4513009B8EF7 /* BSON.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24F5416F14AD4513009B8EF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24F5418514AD4513009B8EF7 /* BSONTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24F5417B14AD4513009B8EF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24F5416314AD4513009B8EF7 /* BSON */;
+			targetProxy = 24F5417A14AD4513009B8EF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		24F5418014AD4513009B8EF7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24F5418114AD4513009B8EF7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24F5418614AD4513009B8EF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		24F5418714AD4513009B8EF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		24F5418914AD4513009B8EF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/BSON.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BSON/BSON-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		24F5418A14AD4513009B8EF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/BSON.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BSON/BSON-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		24F5418C14AD4513009B8EF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BSON/BSON-Prefix.pch";
+				INFOPLIST_FILE = "BSONTests/BSONTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		24F5418D14AD4513009B8EF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BSON/BSON-Prefix.pch";
+				INFOPLIST_FILE = "BSONTests/BSONTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24F5415E14AD4513009B8EF7 /* Build configuration list for PBXProject "BSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24F5418614AD4513009B8EF7 /* Debug */,
+				24F5418714AD4513009B8EF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24F5418814AD4513009B8EF7 /* Build configuration list for PBXNativeTarget "BSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24F5418914AD4513009B8EF7 /* Debug */,
+				24F5418A14AD4513009B8EF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		24F5418B14AD4513009B8EF7 /* Build configuration list for PBXNativeTarget "BSONTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24F5418C14AD4513009B8EF7 /* Debug */,
+				24F5418D14AD4513009B8EF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24F5415B14AD4513009B8EF7 /* Project object */;
+}
