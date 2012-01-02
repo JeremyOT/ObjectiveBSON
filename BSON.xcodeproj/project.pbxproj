@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24F5416814AD4513009B8EF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F5416714AD4513009B8EF7 /* Foundation.framework */; };
-		24F5416E14AD4513009B8EF7 /* BSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F5416D14AD4513009B8EF7 /* BSON.m */; };
+		24F5416E14AD4513009B8EF7 /* BSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F5416D14AD4513009B8EF7 /* BSONSerialization.m */; };
 		24F5417614AD4513009B8EF7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F5417514AD4513009B8EF7 /* SenTestingKit.framework */; };
 		24F5417814AD4513009B8EF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F5417714AD4513009B8EF7 /* UIKit.framework */; };
 		24F5417914AD4513009B8EF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F5416714AD4513009B8EF7 /* Foundation.framework */; };
@@ -30,15 +30,15 @@
 /* Begin PBXFileReference section */
 		24F5416414AD4513009B8EF7 /* libBSON.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBSON.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F5416714AD4513009B8EF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		24F5416B14AD4513009B8EF7 /* BSON-Prefix.pch */ = {isa = PBXFileReference; path = "BSON-Prefix.pch"; sourceTree = "<group>"; };
-		24F5416C14AD4513009B8EF7 /* BSON.h */ = {isa = PBXFileReference; path = BSON.h; sourceTree = "<group>"; };
-		24F5416D14AD4513009B8EF7 /* BSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSON.m; sourceTree = "<group>"; };
+		24F5416B14AD4513009B8EF7 /* BSON-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BSON-Prefix.pch"; sourceTree = "<group>"; };
+		24F5416C14AD4513009B8EF7 /* BSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSONSerialization.h; sourceTree = "<group>"; };
+		24F5416D14AD4513009B8EF7 /* BSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSONSerialization.m; sourceTree = "<group>"; };
 		24F5417414AD4513009B8EF7 /* BSONTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BSONTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F5417514AD4513009B8EF7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		24F5417714AD4513009B8EF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		24F5417F14AD4513009B8EF7 /* BSONTests-Info.plist */ = {isa = PBXFileReference; path = "BSONTests-Info.plist"; sourceTree = "<group>"; };
+		24F5417F14AD4513009B8EF7 /* BSONTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BSONTests-Info.plist"; sourceTree = "<group>"; };
 		24F5418114AD4513009B8EF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		24F5418314AD4513009B8EF7 /* BSONTests.h */ = {isa = PBXFileReference; path = BSONTests.h; sourceTree = "<group>"; };
+		24F5418314AD4513009B8EF7 /* BSONTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSONTests.h; sourceTree = "<group>"; };
 		24F5418414AD4513009B8EF7 /* BSONTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSONTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,8 +97,8 @@
 		24F5416914AD4513009B8EF7 /* BSON */ = {
 			isa = PBXGroup;
 			children = (
-				24F5416C14AD4513009B8EF7 /* BSON.h */,
-				24F5416D14AD4513009B8EF7 /* BSON.m */,
+				24F5416C14AD4513009B8EF7 /* BSONSerialization.h */,
+				24F5416D14AD4513009B8EF7 /* BSONSerialization.m */,
 				24F5416A14AD4513009B8EF7 /* Supporting Files */,
 			);
 			path = BSON;
@@ -239,7 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24F5416E14AD4513009B8EF7 /* BSON.m in Sources */,
+				24F5416E14AD4513009B8EF7 /* BSONSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +347,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BSON/BSON-Prefix.pch";
 				INFOPLIST_FILE = "BSONTests/BSONTests-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -362,6 +363,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BSON/BSON-Prefix.pch";
 				INFOPLIST_FILE = "BSONTests/BSONTests-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -386,6 +388,7 @@
 				24F5418A14AD4513009B8EF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24F5418B14AD4513009B8EF7 /* Build configuration list for PBXNativeTarget "BSONTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +397,7 @@
 				24F5418D14AD4513009B8EF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
