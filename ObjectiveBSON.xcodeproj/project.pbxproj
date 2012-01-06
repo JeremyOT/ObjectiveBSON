@@ -14,6 +14,7 @@
 		24F5417C14AD4513009B8EF7 /* libObjectiveBSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F5416414AD4513009B8EF7 /* libObjectiveBSON.a */; };
 		24F5418214AD4513009B8EF7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24F5418014AD4513009B8EF7 /* InfoPlist.strings */; };
 		24F5418514AD4513009B8EF7 /* BSONTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F5418414AD4513009B8EF7 /* BSONTests.m */; };
+		24FAA2C314B77D85005D8027 /* BSONSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F5416C14AD4513009B8EF7 /* BSONSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24FAA2C314B77D85005D8027 /* BSONSerialization.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
