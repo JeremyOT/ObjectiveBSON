@@ -150,18 +150,27 @@ static void appendDataElement(NSMutableData *data, NSString *name, NSData *o) {
         data += strlen(data) + 1;
         id value;
         switch (type) {
-            case BSON_DOUBLE:
-                value = [NSNumber numberWithDouble:*((double*)data)];
-                data += 8;
+            case BSON_DOUBLE: {
+                double rawVal;
+                memcpy(&rawVal, data, sizeof(double));
+                value = [NSNumber numberWithDouble:rawVal];
+                data += sizeof(double);
                 break;
-            case BSON_INT_32:
-                value = [NSNumber numberWithInt:*((int*)data)];
-                data += 4;
+            }
+            case BSON_INT_32: {
+                int rawVal;
+                memcpy(&rawVal, data, sizeof(int));
+                value = [NSNumber numberWithInt:rawVal];
+                data += sizeof(int);
                 break;
-            case BSON_INT_64:
-                value = [NSNumber numberWithLongLong:*((int64_t*)data)];
-                data += 8;
+            }
+            case BSON_INT_64: {
+                int64_t rawVal;
+                memcpy(&rawVal, data, sizeof(int64_t));
+                value = [NSNumber numberWithLongLong:rawVal];
+                data += sizeof(int64_t);
                 break;
+            }
             case BSON_BOOLEAN:
                 value = [NSNumber numberWithBool:*((u_int8_t*)data)];
                 data ++;
@@ -174,19 +183,22 @@ static void appendDataElement(NSMutableData *data, NSString *name, NSData *o) {
                 break;
             }
             case BSON_DOCUMENT: {
-                int length = *((int*)data);
+                int length;
+                memcpy(&length, data, sizeof(int));
                 value = [self dictionaryFromBSONBytes:data];
                 data += length;
                 break;
             }
             case BSON_ARRAY: {
-                int length = *((int*)data);
+                int length;
+                memcpy(&length, data, sizeof(int));
                 value = [self arrayFromBSONBytes:data];
                 data += length;
                 break;
             }
             case BSON_BINARY: {
-                int length = *((int*)data);
+                int length;
+                memcpy(&length, data, sizeof(int));
                 data += 5;
                 value = [NSData dataWithBytes:data length:length];
                 data += length;
@@ -215,8 +227,11 @@ static void appendDataElement(NSMutableData *data, NSString *name, NSData *o) {
 +(NSArray*)arrayFromBSONBytes:(char*)data {
     NSDictionary *dictionary =[self dictionaryFromBSONBytes:data];
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:[dictionary count]];
+    for (int i = 0; i < [dictionary count]; i++) {
+        [array addObject:[NSNull null]];
+    }
     for (NSString *key in dictionary) {
-        [array insertObject:[dictionary objectForKey:key] atIndex:[key intValue]];
+        [array replaceObjectAtIndex:[key intValue] withObject:[dictionary objectForKey:key]];
     }
     return array;
 }
