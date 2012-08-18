@@ -31,7 +31,7 @@
 @interface NSArray (BSON)
 
 -(NSData*)BSONRepresentation;
-+(NSDictionary*)arrayWithBSON:(NSData*)bsonData;
++(NSArray*)arrayWithBSON:(NSData*)bsonData;
 
 @end
 
