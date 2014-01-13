@@ -42,7 +42,7 @@ static void appendTypeAndName(NSMutableData *data, u_int8_t type, NSString *name
 static void appendStringElement(NSMutableData *data, NSString *name, NSString *o) {
     appendTypeAndName(data, BSON_STRING, name);
     const char *cstring = [o UTF8String];
-    int length = strlen(cstring) + 1;
+    int length = (int)strlen(cstring) + 1;
     [data appendBytes:&length length:4];
     [data appendBytes:cstring length:length];
 }
@@ -91,7 +91,7 @@ static void appendNullElement(NSMutableData *data, NSString *name) {
 
 static void appendDataElement(NSMutableData *data, NSString *name, NSData *o) {
     appendTypeAndName(data, BSON_BINARY, name);
-    int length = [o length];
+    int length = (int)[o length];
     [data appendBytes:&length length:4];
     [data appendBytes:"\x00" length:1];
     [data appendData:o];
@@ -124,13 +124,13 @@ static void appendDataElement(NSMutableData *data, NSString *name, NSData *o) {
         }
     }
     [data appendBytes:"\x00" length:1];
-    int length = [data length];
+    int length = (int)[data length];
     [data replaceBytesInRange:NSMakeRange(0, 4) withBytes:&length];
     return data;
 }
 
 +(NSData*)BSONDataFromArray:(NSArray*)array {
-    int count = [array count];
+    int count = (int)[array count];
     NSMutableArray *keys = [NSMutableArray arrayWithCapacity:[array count]];
     for (int i = 0; i < count; i++) {
         [keys addObject:[[NSNumber numberWithInt:i] stringValue]];
