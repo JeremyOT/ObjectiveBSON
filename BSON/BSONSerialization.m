@@ -29,6 +29,20 @@
 #define BSON_MIN_KEY 0xFF //NA
 #define BSON_MAX_KEY 0x7F //NA
 
+@implementation ObjectID
+
++(ObjectID*)withID:(NSData*)id {
+    ObjectID *obj = [[ObjectID alloc] init];
+    obj.id = id;
+    return obj;
+}
+
+-(BOOL)equals:(ObjectID*)other {
+    return [self.id isEqualToData:other.id];
+}
+
+@end
+
 @implementation BSONSerialization
 
 #pragma mark - Serialization Functions
@@ -85,6 +99,11 @@ static void appendDateElement(NSMutableData *data, NSString *name, NSDate *o) {
     [data appendBytes:&value length:8]; 
 }
 
+static void appendObjectIDElement(NSMutableData *data, NSString *name, ObjectID *id) {
+    appendTypeAndName(data, BSON_OBJECT_ID, name);
+    [data appendData: id.id];
+}
+
 static void appendNullElement(NSMutableData *data, NSString *name) {
     appendTypeAndName(data, BSON_NULL, name);
 }
@@ -109,6 +128,8 @@ static void appendDataElement(NSMutableData *data, NSString *name, NSData *o) {
             appendNumberElement(data, key, object);
         } else if ([object isKindOfClass:[NSData class]]) {
             appendDataElement(data, key, object);
+        } else if ([object isKindOfClass:[ObjectID class]]) {
+            appendObjectIDElement(data, key, object);
         } else if ([object isKindOfClass:[NSDate class]]) {
             appendDateElement(data, key, object);
         } else if ([object isKindOfClass:[NSDictionary class]]) {
@@ -169,6 +190,11 @@ static void appendDataElement(NSMutableData *data, NSString *name, NSData *o) {
                 memcpy(&rawVal, data, sizeof(int64_t));
                 value = [NSNumber numberWithLongLong:rawVal];
                 data += sizeof(int64_t);
+                break;
+            }
+            case BSON_OBJECT_ID: {
+                value = [ObjectID withID:[NSData dataWithBytes:data length:12]];
+                data += 12;
                 break;
             }
             case BSON_BOOLEAN:
